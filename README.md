@@ -7,18 +7,22 @@
         body { font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #eef2f3; }
         
 .card { 
-    background: white; 
-    padding: 25px; 
-    border-radius: 20px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-    text-align: center; 
-    width: 95%; /* Ubah jadi 95% biar hampir full layar */
-    max-width: 1000px; /* <--- UBAH INI JADI 800px atau 1000px */
-    margin: 20px 0;
-    max-height: 90vh; 
-    overflow-y: auto;
-    position: relative;
-}
+            background: white; 
+            padding: 25px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            text-align: center; 
+            
+            /* --- BAGIAN INI KITA PAKSA LEBAR --- */
+            width: 95% !important;        /* Wajib 95% dari layar */
+            max-width: 1000px !important; /* Wajib maksimal 1000px (Sangat Lebar) */
+            /* ----------------------------------- */
+
+            margin: 20px 0;
+            max-height: 90vh; 
+            overflow-y: auto; 
+            position: relative;
+        }
         
         h2 { margin-top: 0; color: #2c3e50; font-size: 1.5rem; }
         
