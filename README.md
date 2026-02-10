@@ -13,6 +13,7 @@
             --gold: #f1c40f;
             --diamond: #00e5ff;
             --danger: #c0392b;
+            --success: #27ae60;
         }
 
         body { 
@@ -37,14 +38,16 @@
             margin-bottom: 50px;
         }
         
-        /* JUDUL DIPERKECIL 25% */
+        /* JUDUL DIPERKECIL 50% */
         h1 { 
             color: var(--primary); 
-            margin: 0 0 20px 0; 
-            font-size: 1.2rem; /* Sebelumnya 1.5rem, sekarang lebih kecil */
+            margin: 0 0 15px 0; 
+            font-size: 0.8rem; /* UKURAN KECIL (50% dari sebelumnya) */
             text-align: center; 
-            border-bottom: 2px solid #eee; 
-            padding-bottom: 15px; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 10px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* MENU ZOOM */
@@ -87,19 +90,18 @@
         .item-name { font-weight: 700; font-size: 1rem; color: #333; }
         .item-price { font-size: 0.9rem; color: #888; }
 
+        /* TOMBOL LOGIN / LOGOUT (POSISI ATAS) */
         #login-btn {
-            background: #4285F4; color: white; border: none; padding: 12px 30px;
+            background: #4285F4; color: white; border: none; padding: 10px 25px;
             border-radius: 30px; font-weight: bold; cursor: pointer; display: block;
-            margin: 20px auto; font-size: 1rem; box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
+            margin: 0 auto 20px auto; /* Posisi di tengah atas */
+            font-size: 0.9rem; box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
+            transition: 0.3s;
         }
+        #login-btn:hover { transform: translateY(-2px); }
 
-        /* --- TOGGLE SWITCH JUMBO (50% LEBIH BESAR) --- */
-        .switch { 
-            position: relative; 
-            display: inline-block; 
-            width: 90px;    /* Diperlebar */
-            height: 48px;   /* Dipertinggi */
-        } 
+        /* --- TOGGLE SWITCH JUMBO --- */
+        .switch { position: relative; display: inline-block; width: 90px; height: 48px; } 
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider {
             position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
@@ -107,14 +109,14 @@
         }
         .slider:before {
             position: absolute; content: ""; 
-            height: 40px; width: 40px; /* BULATAN JADI RAKSASA (40px) */
+            height: 40px; width: 40px; 
             left: 4px; bottom: 4px; 
             background-color: white;
             transition: .4s; border-radius: 50%;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
-        input:checked + .slider { background-color: #27ae60; }
-        input:checked + .slider:before { transform: translateX(42px); } /* Jarak geser disesuaikan */
+        input:checked + .slider { background-color: var(--success); }
+        input:checked + .slider:before { transform: translateX(42px); }
 
         .hide { display: none !important; }
 
@@ -127,8 +129,8 @@
             transition: 0.2s;
         }
         .master-box:hover { transform: scale(1.02); }
-        .master-active { border-color: #27ae60; background: #e8f8f5; }
-        .master-inactive { border-color: #c0392b; background: #fdedec; }
+        .master-active { border-color: var(--success); background: #e8f8f5; }
+        .master-inactive { border-color: var(--danger); background: #fdedec; }
 
     </style>
 </head>
@@ -162,10 +164,7 @@
 
         <h1>🛠️ Aktifkan POP UP</h1>
 
-        <div id="login-area" style="text-align: center; padding: 40px;">
-            <p style="color:#777; font-size: 1.1rem;">Silakan Login Admin Terlebih Dahulu</p>
-            <button id="login-btn" onclick="loginGoogle()">🔑 LOGIN ADMIN (Google)</button>
-        </div>
+        <button id="login-btn" onclick="loginGoogle()">🔑 LOGIN ADMIN (Google)</button>
 
         <div id="control-area" class="hide">
             
@@ -177,8 +176,7 @@
             
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div>
-                    <div class="item-text">
+                    <div class="key-icon">🥈</div> <div class="item-text">
                         <span class="item-name">100 Kunci Silver</span>
                         <span class="item-price">Rp 2.950.000</span>
                     </div>
@@ -188,7 +186,7 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div>
+                    <div class="key-icon">🥈</div>
                     <div class="item-text">
                         <span class="item-name">50 Kunci Silver</span>
                         <span class="item-price">Rp 1.480.000</span>
@@ -199,7 +197,7 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div>
+                    <div class="key-icon">🥈</div>
                     <div class="item-text">
                         <span class="item-name">20 Kunci Silver</span>
                         <span class="item-price">Rp 600.000</span>
@@ -210,7 +208,7 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div>
+                    <div class="key-icon">🥈</div>
                     <div class="item-text">
                         <span class="item-name">10 Kunci Silver</span>
                         <span class="item-price">Rp 310.000</span>
@@ -221,7 +219,7 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div>
+                    <div class="key-icon">🥈</div>
                     <div class="item-text">
                         <span class="item-name">5 Kunci Silver</span>
                         <span class="item-price">Rp 165.000</span>
@@ -232,7 +230,7 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div>
+                    <div class="key-icon">🥈</div>
                     <div class="item-text">
                         <span class="item-name">1 Kunci Silver</span>
                         <span class="item-price">Rp 35.000</span>
@@ -355,7 +353,6 @@
                 <label class="switch"><input type="checkbox" id="chk_promo_diamond_1" onchange="updateItem('promo_diamond_1')"><span class="slider"></span></label>
             </div>
 
-            <button onclick="logout()" style="background:#c0392b; color:white; border:none; padding:15px; width:100%; border-radius:10px; font-weight:bold; margin-top:30px; cursor:pointer;">KELUAR ADMIN (LOGOUT)</button>
         </div>
 
     </div>
@@ -402,8 +399,15 @@
         const MY_ADMIN_UID = "G6N2sLEF6vX0e3X9ndbmft1oHVg2"; 
         let masterStatus = false;
 
+        const loginBtn = document.getElementById('login-btn');
+
         window.loginGoogle = () => signInWithPopup(auth, provider);
-        window.logout = () => signOut(auth).then(() => location.reload());
+        
+        window.logout = () => {
+            signOut(auth).then(() => {
+                location.reload();
+            });
+        };
 
         function updateMasterUI(status) {
             const box = document.getElementById('master-switch-ui');
@@ -430,7 +434,13 @@
 
         onAuthStateChanged(auth, (user) => {
             if (user && user.uid === MY_ADMIN_UID) {
-                document.getElementById('login-area').classList.add('hide');
+                
+                // === UBAH TOMBOL JADI LOGOUT (STYLE ADMIN GENERATOR) ===
+                loginBtn.innerHTML = `✅ Admin: <b>${user.email}</b> (Logout)`;
+                loginBtn.style.background = "#27ae60"; // Hijau
+                loginBtn.onclick = window.logout;
+                // ====================================================
+
                 document.getElementById('control-area').classList.remove('hide');
                 
                 onValue(ref(db, 'config/promo_active'), (snap) => {
@@ -452,7 +462,18 @@
                 });
 
             } else if (user) {
-                alert("Akses Ditolak: Anda bukan Admin!"); signOut(auth);
+                // Kalo bukan admin
+                loginBtn.innerHTML = `⛔ AKSES DITOLAK: ${user.email} (Logout)`;
+                loginBtn.style.background = "#c0392b"; // Merah
+                loginBtn.onclick = window.logout;
+                
+                alert("Akses Ditolak: Anda bukan Admin!"); 
+            } else {
+                // Kalo belum login
+                loginBtn.innerHTML = "🔑 LOGIN ADMIN (Google)";
+                loginBtn.style.background = "#4285F4"; // Biru
+                loginBtn.onclick = window.loginGoogle;
+                document.getElementById('control-area').classList.add('hide');
             }
         });
     </script>
