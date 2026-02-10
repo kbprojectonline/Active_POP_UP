@@ -64,11 +64,77 @@
         .btn-logout { background: #95a5a6; margin-top: 20px; }
         
         .hide { display: none !important; }
+
+/* --- TAMBAHAN CSS MENU ZOOM --- */
+.card {
+    position: relative; /* Wajib ada agar menu menempel di dalam kartu */
+}
+
+.menu-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.hamburger-btn {
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #555;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-btn:hover { color: #2196F3; }
+
+.zoom-dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    padding: 12px;
+    width: 150px;
+    text-align: left;
+    z-index: 101;
+}
+
+.show-menu { display: block !important; }
+
+.zoom-dropdown select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
     </style>
 </head>
 <body>
 
     <div class="card">
+<div class="menu-wrapper">
+            <button class="hamburger-btn" onclick="toggleZoomMenu()">☰</button>
+            <div id="zoom-menu-box" class="zoom-dropdown">
+                <label style="font-size: 0.85rem; font-weight: bold;">Ukuran Layar:</label>
+                <select id="zoom-level" onchange="setZoom(this.value)">
+                    <option value="0.5">Level 1 (50%)</option>
+                    <option value="0.6">Level 2 (60%)</option>
+                    <option value="0.7">Level 3 (70%)</option>
+                    <option value="0.8">Level 4 (80%)</option>
+                    <option value="0.9">Level 5 (90%)</option>
+                    <option value="1.0" selected>Level 6 (Normal)</option>
+                    <option value="1.1">Level 7 (110%)</option>
+                    <option value="1.2">Level 8 (120%)</option>
+                </select>
+            </div>
+        </div>
         <h2>🎛️ Atur Menu Promo</h2>
         
         <div id="login-area">
@@ -161,9 +227,27 @@
 
             </div>
 
-            <button class="btn-action btn-logout" onclick="logout()">Logout</button>
-        </div>
-    </div>
+<button class="btn-action btn-logout" onclick="logout()">Logout</button>
+        </div> </div> <script>
+        function setZoom(val) {
+            document.body.style.zoom = val;
+            localStorage.setItem('adminPromoZoom', val);
+        }
+
+        function toggleZoomMenu() {
+            document.getElementById('zoom-menu-box').classList.toggle('show-menu');
+        }
+
+        window.onload = function() {
+            const savedZoom = localStorage.getItem('adminPromoZoom') || "1.0";
+            document.body.style.zoom = savedZoom;
+            
+            const selectBox = document.getElementById('zoom-level');
+            if(selectBox) {
+                selectBox.value = savedZoom;
+            }
+        }
+    </script>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
