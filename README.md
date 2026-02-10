@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -24,27 +25,22 @@
             transition: zoom 0.2s ease; 
         }
         
-        /* --- KOTAK UTAMA (GAYA ADMIN GENERATOR) --- */
+        /* KOTAK UTAMA (LEBAR 1000PX) */
         .admin-box { 
             background: white; 
             padding: 30px; 
             border-radius: 15px; 
             box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
-            
-            /* INI KUNCINYA SUPAYA LEBAR (SAMA KAYAK GENERATOR) */
             width: 95% !important; 
             max-width: 1000px !important; 
-            /* ----------------------------------------------- */
-            
             box-sizing: border-box; 
             position: relative; 
             margin-bottom: 50px;
         }
         
-        /* HEADER */
         h1 { color: var(--primary); margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
 
-        /* MENU ZOOM (SAMA PERSIS) */
+        /* MENU ZOOM */
         .menu-wrapper { position: absolute; top: 20px; right: 20px; z-index: 100; }
         .hamburger-btn {
             background: transparent; color: #555; border: none; padding: 5px;
@@ -61,7 +57,7 @@
         .show-menu { display: block !important; }
         .zoom-dropdown select { width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
 
-        /* ITEM ROW (GAYA ADMIN GENERATOR) */
+        /* ITEM ROW */
         .category-head {
             font-weight: 900; font-size: 1.1rem; margin-top: 30px; margin-bottom: 10px;
             padding-left: 10px; border-left: 5px solid #ccc; color: #555; text-transform: uppercase;
@@ -84,36 +80,39 @@
         .item-name { font-weight: 700; font-size: 1rem; color: #333; }
         .item-price { font-size: 0.9rem; color: #888; }
 
-        /* LOGIN BUTTON */
         #login-btn {
             background: #4285F4; color: white; border: none; padding: 12px 30px;
             border-radius: 30px; font-weight: bold; cursor: pointer; display: block;
             margin: 20px auto; font-size: 1rem; box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
         }
 
-        /* TOGGLE SWITCH */
-        .switch { position: relative; display: inline-block; width: 50px; height: 26px; }
+        /* --- TOGGLE SWITCH (SUDAH DIPERBESAR) --- */
+        .switch { position: relative; display: inline-block; width: 65px; height: 34px; } /* Lebar & Tinggi Naik */
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider {
             position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
             background-color: #ccc; transition: .4s; border-radius: 34px;
         }
         .slider:before {
-            position: absolute; content: ""; height: 20px; width: 20px;
-            left: 3px; bottom: 3px; background-color: white;
+            position: absolute; content: ""; height: 26px; width: 26px; /* Bulatan Naik */
+            left: 4px; bottom: 4px; background-color: white;
             transition: .4s; border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        input:checked + .slider { background-color: #27ae60; } /* Hijau kayak Admin Gen */
-        input:checked + .slider:before { transform: translateX(24px); }
+        input:checked + .slider { background-color: #27ae60; }
+        input:checked + .slider:before { transform: translateX(31px); } /* Geser lebih jauh */
 
         .hide { display: none !important; }
 
-        /* MASTER SWITCH */
+        /* MASTER SWITCH (MODIFIKASI: Cuma Status) */
         .master-box {
-            background: #f8f9fa; padding: 15px; border-radius: 10px;
-            display: flex; justify-content: space-between; align-items: center;
+            background: #f8f9fa; padding: 20px; border-radius: 12px;
+            display: flex; justify-content: center; /* Posisi Tengah */
+            align-items: center; text-align: center;
             border: 2px solid #eee; margin-bottom: 20px; cursor: pointer;
+            transition: 0.2s;
         }
+        .master-box:hover { transform: scale(1.02); }
         .master-active { border-color: #27ae60; background: #e8f8f5; }
         .master-inactive { border-color: #c0392b; background: #fdedec; }
 
@@ -138,7 +137,7 @@
             </div>
         </div>
 
-        <h1>🛠️ Atur Menu Promo</h1>
+        <h1>🛠️ Aktifkan POP UP</h1>
 
         <div id="login-area" style="text-align: center; padding: 40px;">
             <p style="color:#777; font-size: 1.1rem;">Silakan Login Admin Terlebih Dahulu</p>
@@ -148,15 +147,15 @@
         <div id="control-area" class="hide">
             
             <div id="master-switch-ui" class="master-box master-inactive" onclick="toggleMaster()">
-                <div style="font-weight:bold; font-size:1.1rem; color:#555;">SAKLAR UTAMA TOKO</div>
-                <div id="master-status-text" style="font-weight:900; font-size:1.2rem; color:#c0392b;">OFF (MATI)</div>
+                <div id="master-status-text" style="font-weight:900; font-size:1.5rem; color:#c0392b;">OFF (MATI) ⭕</div>
             </div>
 
             <div class="category-head head-silver">PAKET SILVER</div>
             
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">🗝️</div> <div class="item-text">
+                    <div class="key-icon">🗝️</div>
+                    <div class="item-text">
                         <span class="item-name">100 Kunci Silver</span>
                         <span class="item-price">Rp 2.950.000</span>
                     </div>
@@ -224,7 +223,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">👑</div> <div class="item-text">
+                    <div class="key-icon">👑</div>
+                    <div class="item-text">
                         <span class="item-name">70 Kunci Gold</span>
                         <span class="item-price">Rp 5.000.000</span>
                     </div>
@@ -280,7 +280,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon">💎</div> <div class="item-text">
+                    <div class="key-icon">💎</div>
+                    <div class="item-text">
                         <span class="item-name">25 Kunci Diamond</span>
                         <span class="item-price">Rp 5.300.000</span>
                     </div>
@@ -381,7 +382,6 @@
         window.loginGoogle = () => signInWithPopup(auth, provider);
         window.logout = () => signOut(auth).then(() => location.reload());
 
-        // Master Switch UI Logic
         function updateMasterUI(status) {
             const box = document.getElementById('master-switch-ui');
             const txt = document.getElementById('master-status-text');
@@ -410,13 +410,11 @@
                 document.getElementById('login-area').classList.add('hide');
                 document.getElementById('control-area').classList.remove('hide');
                 
-                // 1. Master Listener
                 onValue(ref(db, 'config/promo_active'), (snap) => {
                     masterStatus = snap.val() === true;
                     updateMasterUI(masterStatus);
                 });
 
-                // 2. Items Listener
                 onValue(ref(db, 'config/promo_items'), (snap) => {
                     const data = snap.val() || {};
                     const keys = [
