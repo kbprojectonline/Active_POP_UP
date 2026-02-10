@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Promo - Wide Mode</title>
+    <title>Admin Promo - Final Version</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700;900&display=swap" rel="stylesheet">
 
@@ -25,7 +24,7 @@
             transition: zoom 0.2s ease; 
         }
         
-        /* KOTAK UTAMA (LEBAR 1000PX) */
+        /* KOTAK UTAMA LEBAR 1000PX */
         .admin-box { 
             background: white; 
             padding: 30px; 
@@ -38,13 +37,21 @@
             margin-bottom: 50px;
         }
         
-        h1 { color: var(--primary); margin: 0 0 20px 0; font-size: 1.5rem; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        /* JUDUL DIPERKECIL 25% */
+        h1 { 
+            color: var(--primary); 
+            margin: 0 0 20px 0; 
+            font-size: 1.2rem; /* Sebelumnya 1.5rem, sekarang lebih kecil */
+            text-align: center; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 15px; 
+        }
 
         /* MENU ZOOM */
         .menu-wrapper { position: absolute; top: 20px; right: 20px; z-index: 100; }
         .hamburger-btn {
             background: transparent; color: #555; border: none; padding: 5px;
-            font-size: 30px; cursor: pointer; transition: 0.2s; outline: none; line-height: 1;
+            font-size: 24px; cursor: pointer; transition: 0.2s; outline: none; line-height: 1;
         }
         .hamburger-btn:hover { color: var(--primary); }
 
@@ -86,28 +93,35 @@
             margin: 20px auto; font-size: 1rem; box-shadow: 0 4px 10px rgba(66, 133, 244, 0.3);
         }
 
-        /* --- TOGGLE SWITCH (SUDAH DIPERBESAR) --- */
-        .switch { position: relative; display: inline-block; width: 65px; height: 34px; } /* Lebar & Tinggi Naik */
+        /* --- TOGGLE SWITCH JUMBO (50% LEBIH BESAR) --- */
+        .switch { 
+            position: relative; 
+            display: inline-block; 
+            width: 90px;    /* Diperlebar */
+            height: 48px;   /* Dipertinggi */
+        } 
         .switch input { opacity: 0; width: 0; height: 0; }
         .slider {
             position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
-            background-color: #ccc; transition: .4s; border-radius: 34px;
+            background-color: #ccc; transition: .4s; border-radius: 50px;
         }
         .slider:before {
-            position: absolute; content: ""; height: 26px; width: 26px; /* Bulatan Naik */
-            left: 4px; bottom: 4px; background-color: white;
+            position: absolute; content: ""; 
+            height: 40px; width: 40px; /* BULATAN JADI RAKSASA (40px) */
+            left: 4px; bottom: 4px; 
+            background-color: white;
             transition: .4s; border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
         input:checked + .slider { background-color: #27ae60; }
-        input:checked + .slider:before { transform: translateX(31px); } /* Geser lebih jauh */
+        input:checked + .slider:before { transform: translateX(42px); } /* Jarak geser disesuaikan */
 
         .hide { display: none !important; }
 
-        /* MASTER SWITCH (MODIFIKASI: Cuma Status) */
+        /* MASTER SWITCH */
         .master-box {
             background: #f8f9fa; padding: 20px; border-radius: 12px;
-            display: flex; justify-content: center; /* Posisi Tengah */
+            display: flex; justify-content: center;
             align-items: center; text-align: center;
             border: 2px solid #eee; margin-bottom: 20px; cursor: pointer;
             transition: 0.2s;
@@ -127,12 +141,21 @@
             <div id="zoom-menu-box" class="zoom-dropdown">
                 <label>Ukuran Layar:</label>
                 <select id="zoom-level" onchange="setZoom(this.value)">
-                    <option value="0.5">Level 1 (50%)</option>
-                    <option value="0.8">Level 4 (80%)</option>
-                    <option value="1.0" selected>Level 6 (Normal)</option>
-                    <option value="1.2">Level 8 (120%)</option>
-                    <option value="1.5">Level 11 (150%)</option>
-                    <option value="1.9">Level 15 (190%)</option>
+                    <option value="0.1">Level 1 (10%)</option>
+                    <option value="0.2">Level 2 (20%)</option>
+                    <option value="0.3">Level 3 (30%)</option>
+                    <option value="0.4">Level 4 (40%)</option>
+                    <option value="0.5">Level 5 (50%)</option>
+                    <option value="0.6">Level 6 (60%)</option>
+                    <option value="0.7">Level 7 (70%)</option>
+                    <option value="0.8">Level 8 (80%)</option>
+                    <option value="0.9">Level 9 (90%)</option>
+                    <option value="1.0" selected>Level 10 (100% - Normal)</option>
+                    <option value="1.1">Level 11 (110%)</option>
+                    <option value="1.2">Level 12 (120%)</option>
+                    <option value="1.3">Level 13 (130%)</option>
+                    <option value="1.4">Level 14 (140%)</option>
+                    <option value="1.5">Level 15 (150%)</option>
                 </select>
             </div>
         </div>
