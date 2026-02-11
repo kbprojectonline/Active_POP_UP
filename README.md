@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Promo - Final Perfected</title>
+    <title>Admin Promo - Final Badge Style</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
@@ -60,16 +60,17 @@
         .zoom-dropdown label { font-size: 0.8rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; display: block;}
         .zoom-dropdown select { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; }
 
-        /* TOMBOL LOGIN SEKARANG DI PALING ATAS DENGAN MARGIN TOP */
+        /* TOMBOL LOGIN */
         #login-btn {
             background: #4285F4; color: white; border: none; padding: 12px 30px;
             border-radius: 50px; font-weight: 700; cursor: pointer; display: block;
-            margin: 20px auto 30px auto; /* Ada margin atas sekarang */
+            margin: 20px auto 30px auto;
             font-size: 0.95rem; box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
             transition: 0.3s; letter-spacing: 0.5px;
         }
         #login-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4); }
 
+        /* MASTER SWITCH */
         .master-box {
             background: var(--bg-light); padding: 25px; border-radius: 16px;
             display: flex; justify-content: center; align-items: center; text-align: center;
@@ -80,10 +81,10 @@
         .master-active { border-color: var(--success); background: #e8f8f5; }
         .master-inactive { border-color: var(--danger); background: #fdedec; }
 
-        /* JUDUL KATEGORI LEBIH LEGA LAGI */
+        /* KATEGORI */
         .category-head {
             font-weight: 900; font-size: 1.2rem; 
-            margin-top: 90px; /* JARAK DITAMBAH JADI 90px */
+            margin-top: 90px; 
             margin-bottom: 25px;
             padding-left: 15px; border-left: 6px solid #ccc; color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px;
         }
@@ -91,6 +92,7 @@
         .head-gold { border-color: var(--gold); color: #f39c12; }
         .head-diamond { border-color: var(--diamond); color: #00a8ff; }
 
+        /* ITEM ROW */
         .item-row { 
             display: flex; justify-content: space-between; align-items: center; 
             background: white; padding: 20px; margin-bottom: 15px; 
@@ -102,26 +104,31 @@
         
         .item-left { display: flex; align-items: flex-start; gap: 20px; flex: 1; }
         
-        /* IKON DIPASTIKAN DITENGAH (CENTERED) */
-        .key-icon-box {
-            width: 60px; height: 60px; background: var(--bg-light); border-radius: 12px;
-            display: flex; justify-content: center; align-items: center; /* Ini kuncinya agar simetris */
-            font-size: 2rem; flex-shrink: 0;
-        }
-
-        .item-text { display: flex; flex-direction: column; gap: 4px; }
-        .item-name { font-weight: 800; font-size: 1.1rem; color: var(--text-dark); }
+        /* STYLE KHUSUS BADGE NAMA (PENGGANTI ICON) */
+        .item-text { display: flex; flex-direction: column; gap: 8px; }
         
-        /* SPASI HARGA CORET LEBIH LEBAR */
-        .price-container { display: flex; flex-direction: column; }
+        .item-name { 
+            font-weight: 800; font-size: 1rem; 
+            padding: 8px 15px; 
+            border-radius: 8px; 
+            display: inline-block;
+            width: fit-content;
+        }
+        /* WARNA BACKGROUND BADGE */
+        .bg-silver { background-color: #dfe6e9; color: #636e72; }
+        .bg-gold { background-color: #fff7d1; color: #b7791f; }
+        .bg-diamond { background-color: #e0f7fa; color: #0097a7; }
+
+        /* HARGA */
+        .price-container { display: flex; flex-direction: column; padding-left: 5px; }
         .main-price { font-size: 1.3rem; font-weight: 900; color: var(--primary); }
         .promo-info { 
             font-size: 0.85rem; font-weight: 600; color: var(--success); 
-            display: flex; align-items: center; 
-            gap: 15px; /* JARAK DIPERLEBAR JADI 15px */
+            display: flex; align-items: center; gap: 15px; margin-top: 2px;
         }
         .strikethrough { text-decoration: line-through; color: var(--text-muted); font-weight: 400; }
 
+        /* TOGGLE JUMBO */
         .switch { 
             position: relative; display: inline-block; width: 140px; height: 70px; flex-shrink: 0; margin-left: 20px;
         } 
@@ -184,9 +191,8 @@
             
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box">🥈</div>
                     <div class="item-text">
-                        <span class="item-name">100 Kunci Silver</span>
+                        <span class="item-name bg-silver">100 Kunci Silver</span>
                         <div class="price-container">
                             <span class="main-price">Rp 3.500.000</span>
                             <span class="promo-info">Hemat 500rb <span class="strikethrough">Rp 4.000.000</span></span>
@@ -198,9 +204,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box">🥈</div>
                     <div class="item-text">
-                        <span class="item-name">50 Kunci Silver</span>
+                        <span class="item-name bg-silver">50 Kunci Silver</span>
                         <div class="price-container">
                             <span class="main-price">Rp 1.800.000</span>
                             <span class="promo-info">Hemat 200rb <span class="strikethrough">Rp 2.000.000</span></span>
@@ -212,9 +217,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box">🥈</div>
                     <div class="item-text">
-                        <span class="item-name">20 Kunci Silver</span>
+                        <span class="item-name bg-silver">20 Kunci Silver</span>
                         <div class="price-container">
                             <span class="main-price">Rp 730.000</span>
                             <span class="promo-info">Hemat 70rb <span class="strikethrough">Rp 800.000</span></span>
@@ -226,9 +230,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box">🥈</div>
                     <div class="item-text">
-                        <span class="item-name">10 Kunci Silver</span>
+                        <span class="item-name bg-silver">10 Kunci Silver</span>
                         <div class="price-container">
                             <span class="main-price">Rp 370.000</span>
                             <span class="promo-info">Hemat 30rb <span class="strikethrough">Rp 400.000</span></span>
@@ -240,9 +243,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box">🥈</div>
                     <div class="item-text">
-                        <span class="item-name">5 Kunci Silver</span>
+                        <span class="item-name bg-silver">5 Kunci Silver</span>
                         <div class="price-container">
                             <span class="main-price">Rp 195.000</span>
                             <span class="promo-info">Hemat 5rb <span class="strikethrough">Rp 200.000</span></span>
@@ -254,12 +256,11 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box">🥈</div>
                     <div class="item-text">
-                        <span class="item-name">1 Kunci Silver</span>
-                        <span class="price-container">
+                        <span class="item-name bg-silver">1 Kunci Silver</span>
+                        <div class="price-container">
                             <span class="main-price" style="font-size: 1.1rem;">Rp 35.000</span>
-                        </span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_silver_1" onchange="updateItem('promo_silver_1')"><span class="slider"></span></label>
@@ -270,9 +271,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #fffcf2;">👑</div>
                     <div class="item-text">
-                        <span class="item-name">70 Kunci Gold</span>
+                        <span class="item-name bg-gold">70 Kunci Gold</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 5.000.000</span>
                     </div>
                 </div>
@@ -281,9 +281,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #fffcf2;">👑</div>
                     <div class="item-text">
-                        <span class="item-name">50 Kunci Gold</span>
+                        <span class="item-name bg-gold">50 Kunci Gold</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 3.700.000</span>
                     </div>
                 </div>
@@ -292,9 +291,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #fffcf2;">👑</div>
                     <div class="item-text">
-                        <span class="item-name">10 Kunci Gold</span>
+                        <span class="item-name bg-gold">10 Kunci Gold</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 760.000</span>
                     </div>
                 </div>
@@ -303,9 +301,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #fffcf2;">👑</div>
                     <div class="item-text">
-                        <span class="item-name">5 Kunci Gold</span>
+                        <span class="item-name bg-gold">5 Kunci Gold</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 410.000</span>
                     </div>
                 </div>
@@ -313,9 +310,8 @@
             </div>
              <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #fffcf2;">👑</div>
                     <div class="item-text">
-                        <span class="item-name">1 Kunci Gold</span>
+                        <span class="item-name bg-gold">1 Kunci Gold</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 85.000</span>
                     </div>
                 </div>
@@ -327,9 +323,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #f0fbff;">💎</div>
                     <div class="item-text">
-                        <span class="item-name">25 Kunci Diamond</span>
+                        <span class="item-name bg-diamond">25 Kunci Diamond</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 5.300.000</span>
                     </div>
                 </div>
@@ -338,9 +333,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #f0fbff;">💎</div>
                     <div class="item-text">
-                        <span class="item-name">15 Kunci Diamond</span>
+                        <span class="item-name bg-diamond">15 Kunci Diamond</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 3.250.000</span>
                     </div>
                 </div>
@@ -349,9 +343,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #f0fbff;">💎</div>
                     <div class="item-text">
-                        <span class="item-name">10 Kunci Diamond</span>
+                        <span class="item-name bg-diamond">10 Kunci Diamond</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 2.200.000</span>
                     </div>
                 </div>
@@ -360,9 +353,8 @@
 
             <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #f0fbff;">💎</div>
                     <div class="item-text">
-                        <span class="item-name">5 Kunci Diamond</span>
+                        <span class="item-name bg-diamond">5 Kunci Diamond</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 1.150.000</span>
                     </div>
                 </div>
@@ -370,9 +362,8 @@
             </div>
              <div class="item-row">
                 <div class="item-left">
-                    <div class="key-icon-box" style="background: #f0fbff;">💎</div>
                     <div class="item-text">
-                        <span class="item-name">1 Kunci Diamond</span>
+                        <span class="item-name bg-diamond">1 Kunci Diamond</span>
                         <span class="main-price" style="font-size: 1.1rem;">Rp 250.000</span>
                     </div>
                 </div>
