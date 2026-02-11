@@ -187,7 +187,7 @@
                 <div id="master-status-text" style="font-weight:900; font-size:1.8rem; color:#e74c3c;">OFF (MATI) ⭕</div>
             </div>
 
-            <div class="category-head head-silver">PAKET SILVER</div>
+<div class="category-head head-silver">PAKET SILVER</div>
             
             <div class="item-row">
                 <div class="item-left">
@@ -207,8 +207,8 @@
                     <div class="item-text">
                         <span class="item-name bg-silver">50 Kunci Silver</span>
                         <div class="price-container">
-                            <span class="main-price">Rp 1.800.000</span>
-                            <span class="promo-info">Hemat 200rb <span class="strikethrough">Rp 2.000.000</span></span>
+                            <span class="main-price">Rp 1.850.000</span>
+                            <span class="promo-info">Hemat 150rb <span class="strikethrough">Rp 2.000.000</span></span>
                         </div>
                     </div>
                 </div>
@@ -246,8 +246,8 @@
                     <div class="item-text">
                         <span class="item-name bg-silver">5 Kunci Silver</span>
                         <div class="price-container">
-                            <span class="main-price">Rp 195.000</span>
-                            <span class="promo-info">Hemat 5rb <span class="strikethrough">Rp 200.000</span></span>
+                            <span class="main-price">Rp 190.000</span>
+                            <span class="promo-info">Hemat 10rb <span class="strikethrough">Rp 200.000</span></span>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
                     <div class="item-text">
                         <span class="item-name bg-silver">1 Kunci Silver</span>
                         <div class="price-container">
-                            <span class="main-price" style="font-size: 1.1rem;">Rp 35.000</span>
+                            <span class="main-price" style="font-size: 1.1rem;">Rp 40.000</span>
                         </div>
                     </div>
                 </div>
@@ -267,13 +267,16 @@
             </div>
 
 
-            <div class="category-head head-gold">PAKET GOLD</div>
+<div class="category-head head-gold">PAKET GOLD</div>
 
             <div class="item-row">
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-gold">70 Kunci Gold</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 5.000.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 5.000.000</span>
+                            <span class="promo-info">Hemat 1.3jt <span class="strikethrough">Rp 6.300.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_gold_70" onchange="updateItem('promo_gold_70')"><span class="slider"></span></label>
@@ -283,7 +286,10 @@
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-gold">50 Kunci Gold</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 3.700.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 4.000.000</span>
+                            <span class="promo-info">Hemat 500rb <span class="strikethrough">Rp 4.500.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_gold_50" onchange="updateItem('promo_gold_50')"><span class="slider"></span></label>
@@ -292,8 +298,24 @@
             <div class="item-row">
                 <div class="item-left">
                     <div class="item-text">
+                        <span class="item-name bg-gold">20 Kunci Gold</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 1.600.000</span>
+                            <span class="promo-info">Hemat 200rb <span class="strikethrough">Rp 1.800.000</span></span>
+                        </div>
+                    </div>
+                </div>
+                <label class="switch"><input type="checkbox" id="chk_promo_gold_20" onchange="updateItem('promo_gold_20')"><span class="slider"></span></label>
+            </div>
+
+            <div class="item-row">
+                <div class="item-left">
+                    <div class="item-text">
                         <span class="item-name bg-gold">10 Kunci Gold</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 760.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 820.000</span>
+                            <span class="promo-info">Hemat 80rb <span class="strikethrough">Rp 900.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_gold_10" onchange="updateItem('promo_gold_10')"><span class="slider"></span></label>
@@ -303,29 +325,36 @@
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-gold">5 Kunci Gold</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 410.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 425.000</span>
+                            <span class="promo-info">Hemat 25rb <span class="strikethrough">Rp 450.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_gold_5" onchange="updateItem('promo_gold_5')"><span class="slider"></span></label>
             </div>
-             <div class="item-row">
+
+            <div class="item-row">
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-gold">1 Kunci Gold</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 85.000</span>
+                        <span class="main-price" style="font-size: 1.1rem;">Rp 90.000</span>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_gold_1" onchange="updateItem('promo_gold_1')"><span class="slider"></span></label>
             </div>
 
 
-            <div class="category-head head-diamond">PAKET DIAMOND</div>
+<div class="category-head head-diamond">PAKET DIAMOND</div>
 
             <div class="item-row">
                 <div class="item-left">
                     <div class="item-text">
-                        <span class="item-name bg-diamond">25 Kunci Diamond</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 5.300.000</span>
+                        <span class="item-name bg-diamond">30 Kunci Diamond</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 5.000.000</span>
+                            <span class="promo-info">Hemat 2.5jt <span class="strikethrough">Rp 7.500.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_diamond_25" onchange="updateItem('promo_diamond_25')"><span class="slider"></span></label>
@@ -335,7 +364,10 @@
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-diamond">15 Kunci Diamond</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 3.250.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 3.000.000</span>
+                            <span class="promo-info">Hemat 750rb <span class="strikethrough">Rp 3.750.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_diamond_15" onchange="updateItem('promo_diamond_15')"><span class="slider"></span></label>
@@ -345,7 +377,10 @@
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-diamond">10 Kunci Diamond</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 2.200.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 2.200.000</span>
+                            <span class="promo-info">Hemat 300rb <span class="strikethrough">Rp 2.500.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_diamond_10" onchange="updateItem('promo_diamond_10')"><span class="slider"></span></label>
@@ -355,7 +390,10 @@
                 <div class="item-left">
                     <div class="item-text">
                         <span class="item-name bg-diamond">5 Kunci Diamond</span>
-                        <span class="main-price" style="font-size: 1.1rem;">Rp 1.150.000</span>
+                        <div class="price-container">
+                            <span class="main-price">Rp 1.200.000</span>
+                            <span class="promo-info">Hemat 50rb <span class="strikethrough">Rp 1.250.000</span></span>
+                        </div>
                     </div>
                 </div>
                 <label class="switch"><input type="checkbox" id="chk_promo_diamond_5" onchange="updateItem('promo_diamond_5')"><span class="slider"></span></label>
@@ -465,9 +503,9 @@
 
                 onValue(ref(db, 'config/promo_items'), (snap) => {
                     const data = snap.val() || {};
-                    const keys = [
+const keys = [
                         'promo_silver_100', 'promo_silver_50', 'promo_silver_20', 'promo_silver_10', 'promo_silver_5', 'promo_silver_1',
-                        'promo_gold_70', 'promo_gold_50', 'promo_gold_10', 'promo_gold_5', 'promo_gold_1',
+                        'promo_gold_70', 'promo_gold_50', 'promo_gold_20', 'promo_gold_10', 'promo_gold_5', 'promo_gold_1',
                         'promo_diamond_25', 'promo_diamond_15', 'promo_diamond_10', 'promo_diamond_5', 'promo_diamond_1'
                     ];
                     keys.forEach(k => {
