@@ -280,7 +280,7 @@
             </div>
 
 
-<div class="category-head head-gold">PAKET KUNCI GOLD</div>
+<div class="category-head head-gold">PAKET KUNCI GOLD LENGKAP</div>
 
             <div class="item-row">
                 <div class="item-left">
@@ -358,7 +358,7 @@
             </div>
 
 
-<div class="category-head head-diamond">PAKET KUNCI DIAMOND</div>
+<div class="category-head head-diamond">PAKET KUNCI DIAMOND LENGKAP</div>
 
             <div class="item-row">
                 <div class="item-left">
