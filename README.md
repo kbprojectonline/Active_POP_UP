@@ -482,11 +482,11 @@
             const txt = document.getElementById('master-status-text');
             if(status) {
                 box.className = "master-box master-active";
-                txt.innerText = "ON (MENYALA) ✅";
+                txt.innerText = "ON ✅";
                 txt.style.color = "#2ecc71";
             } else {
                 box.className = "master-box master-inactive";
-                txt.innerText = "OFF (MATI) ⭕";
+                txt.innerText = "OFF ⭕";
                 txt.style.color = "#e74c3c";
             }
         }
