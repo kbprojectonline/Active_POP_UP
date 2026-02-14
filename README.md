@@ -187,7 +187,7 @@
                 <div id="master-status-text" style="font-weight:900; font-size:1.8rem; color:#e74c3c;">OFF (MATI) ⭕</div>
             </div>
 
-<div class="category-head head-silver">PAKET KUNCI SILVER</div>
+<div class="category-head head-silver">PAKET KUNCI SILVER LENGKAP</div>
 
             <div class="item-row">
                 <div class="item-left">
