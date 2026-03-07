@@ -272,12 +272,12 @@
                     <div class="item-text">
                         <span class="item-name bg-silver">5 Kunci Silver</span>
                         <div class="price-container">
-                            <span class="main-price">Rp 0</span>
-                            <span class="promo-info">Hemat 200rb <span class="strikethrough">Rp 200.000</span></span>
+                            <span class="main-price">Rp 190.000</span>
+                            <span class="promo-info">Hemat 10rb <span class="strikethrough">Rp 200.000</span></span>
                         </div>
                     </div>
                 </div>
-                <label class="switch"><input type="checkbox" id="chk_promo_silver_5_0rp" onchange="updateItem('promo_silver_5_0rp')"><span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" id="chk_promo_silver_5_1" onchange="updateItem('promo_silver_5_1')"><span class="slider"></span></label>
             </div>
 
             <div class="item-row">
@@ -530,7 +530,7 @@
                 onValue(ref(db, 'config/promo_items'), (snap) => {
                     const data = snap.val() || {};
 const keys = [
-                        'promo_silver_100', 'promo_silver_100_3jt', 'promo_silver_50', 'promo_silver_20', 'promo_silver_10', 'promo_silver_5', 'promo_silver_5_0rp', 'promo_silver_1',
+                        'promo_silver_100', 'promo_silver_100_3jt', 'promo_silver_50', 'promo_silver_20', 'promo_silver_10', 'promo_silver_5', 'promo_silver_5_1', 'promo_silver_1',
                         'promo_gold_70', 'promo_gold_50', 'promo_gold_20', 'promo_gold_10', 'promo_gold_5', 'promo_gold_1',
                         'promo_diamond_25', 'promo_diamond_15', 'promo_diamond_10', 'promo_diamond_5', 'promo_diamond_1'
                     ];
