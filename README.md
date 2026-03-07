@@ -272,7 +272,7 @@
                     <div class="item-text">
                         <span class="item-name bg-silver">5 Kunci Silver</span>
                         <div class="price-container">
-                            <span class="main-price">Rp 0 Rupiah</span>
+                            <span class="main-price">Rp 0</span>
                             <span class="promo-info">Hemat 200rb <span class="strikethrough">Rp 200.000</span></span>
                         </div>
                     </div>
