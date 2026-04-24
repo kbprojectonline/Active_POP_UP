@@ -383,7 +383,7 @@
                         </div>
                     </div>
                 </div>
-                <label class="switch"><input type="checkbox" id="chk_promo_diamond_25" onchange="updateItem('promo_diamond_25')"><span class="slider"></span></label>
+                <label class="switch"><input type="checkbox" id="chk_promo_diamond_30" onchange="updateItem('promo_diamond_30')"><span class="slider"></span></label>
             </div>
 
             <div class="item-row">
@@ -532,7 +532,7 @@
 const keys = [
                         'promo_silver_100', 'promo_silver_100_3jt', 'promo_silver_50', 'promo_silver_20', 'promo_silver_10', 'promo_silver_5', 'promo_silver_5_gratis', 'promo_silver_1',
                         'promo_gold_70', 'promo_gold_50', 'promo_gold_20', 'promo_gold_10', 'promo_gold_5', 'promo_gold_1',
-                        'promo_diamond_25', 'promo_diamond_15', 'promo_diamond_10', 'promo_diamond_5', 'promo_diamond_1'
+                        'promo_diamond_30', 'promo_diamond_15', 'promo_diamond_10', 'promo_diamond_5', 'promo_diamond_1'
                     ];
                     keys.forEach(k => {
                         const el = document.getElementById('chk_' + k);
